@@ -1,4 +1,4 @@
-import DummyClass from "../src/emtrendz-fps"
+import EmTrendz_FPS from "../src/EmTrendz_FPS"
 
 /**
  * Dummy test
@@ -8,7 +8,7 @@ describe("Dummy test", () => {
     expect(true).toBeTruthy()
   })
 
-  it("DummyClass is instantiable", () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+  it("EmTrendz_FPS is instantiable", () => {
+    expect(new EmTrendz_FPS()).toBeInstanceOf(EmTrendz_FPS)
   })
 })

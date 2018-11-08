@@ -6,7 +6,7 @@ import calculator from './calculator/index';
 export default class EmTrendz_FPS {
   constructor() {
     let calc = new calculator();
-    alert(calc.sum(2,3));
+    console.log(calc.sum(2,3));
   }
 }
 
