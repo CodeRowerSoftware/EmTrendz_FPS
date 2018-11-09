@@ -1,6 +1,6 @@
 # EmTrendz-FPS
 API to connect to FPS portal
-
+[![Coverage Status](https://coveralls.io/repos/github/CodeRowerSoftware/EmTrendz_FPS/badge.svg?branch=master)](https://coveralls.io/github/CodeRowerSoftware/EmTrendz_FPS?branch=master)
 ### NPM scripts
 
  - `npm t`: Run test suite
