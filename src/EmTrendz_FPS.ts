@@ -1,7 +1,10 @@
+import { ping } from './EmtServer/Ping/index'
+
 /* tslint:disable */
 export default class EmTrendz_FPS {
-  constructor() {
-    
+  BRAND: string
+  constructor(brnd: string) {
+    this.BRAND = brnd
+    ping(this.BRAND)
   }
 }
-

@@ -4,6 +4,7 @@ import sourceMaps from 'rollup-plugin-sourcemaps'
 import camelCase from 'lodash.camelcase'
 import typescript from 'rollup-plugin-typescript2'
 import json from 'rollup-plugin-json'
+import builtins from 'rollup-plugin-node-builtins';
 
 const pkg = require('./package.json')
 
@@ -14,7 +15,7 @@ export default {
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: 'umd', sourcemap: true },
     { file: pkg.module, format: 'es', sourcemap: true },
-    { file: `${pkg.module}.min.js`, name: 'EmTrendz_FPS', format: 'iife', sourcemap: true },
+    { file: pkg.library, name: 'EmTrendz_FPS', format: 'iife', sourcemap: true },
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: [],
@@ -22,6 +23,9 @@ export default {
     include: 'src/**',
   },
   plugins: [
+    // shims for Node JS  https://github.com/calvinmetcalf/rollup-plugin-node-builtins
+    builtins(),
+
     // Allow json resolution
     json(),
     // Compile TypeScript files
